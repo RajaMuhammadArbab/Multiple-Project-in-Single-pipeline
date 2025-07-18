@@ -1,0 +1,48 @@
+name: Multi-Project Python CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  run_quiz_project:
+    name: 🧠 Run Quiz Project
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: p1_quiz
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python main.py
+
+  run_swap_project:
+    name: 🔄 Run Swap Project
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: p2_swap
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python main.py
+
+  run_df_project:
+    name: 📊 Run DataFrame Project
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: P3_df
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install pandas openpyxl
+      - run: python main.py
