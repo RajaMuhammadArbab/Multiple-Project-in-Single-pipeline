@@ -1,4 +1,4 @@
-name: Multi-Project Python CI
+name: Multiple_Project_in_Single_pipeline
 
 on:
   push:
