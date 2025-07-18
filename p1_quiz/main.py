@@ -1,46 +1,30 @@
+mock_answers = ["Islamabad", "4", "Python"]
+
 questions = [
-    {
-        "question": "What is the capital of Pakistan?",
-        "answer": "Islamabad",
-        "marks": 5,
-        "penalty": -2
-    },
-    {
-        "question": "What is 5 + 7?",
-        "answer": "12",
-        "marks": 3,
-        "penalty": -1
-    },
-    {
-        "question": "Which language is used for web apps?",
-        "answer": "JavaScript",
-        "marks": 4,
-        "penalty": -2
-    }
+    {"question": "What is the capital of Pakistan?", "answer": "Islamabad", "marks": 5, "penalty": -2},
+    {"question": "What is 2 + 2?", "answer": "4", "marks": 2, "penalty": -1},
+    {"question": "Which language is this quiz in?", "answer": "Python", "marks": 3, "penalty": -1}
 ]
 
-
-total_score = 0
-current_question = 1
+score = 0
 total_questions = len(questions)
+current_question = 1
 
-
-for q in questions:
+for i, q in enumerate(questions):
     print(f"\nQuestion {current_question}/{total_questions}: {q['question']}")
-    user_answer = input("Your answer: ").strip()
+    
+    user_answer = mock_answers[i]  # No input() here
+    print(f"Auto Answered: {user_answer}")
 
     if user_answer.lower() == q['answer'].lower():
+        score += q['marks']
         print("Correct!")
-        total_score += q['marks']
     else:
-        print(f"Wrong! The correct answer is: {q['answer']}")
-        total_score += q['penalty']
-
+        score += q['penalty']
+        print(" Wrong!")
     current_question += 1
 
-
-print("\n Quiz Completed!")
-print(f"Your Total Score: {total_score}")
+print(f"\nFinal Score: {score}")
 
 
 if total_score > 10:
