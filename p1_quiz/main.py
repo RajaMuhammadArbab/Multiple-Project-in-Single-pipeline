@@ -26,16 +26,6 @@ for i, q in enumerate(questions):
 
 print(f"\nFinal Score: {score}")
 
-percentage = (score / total_possible) * 100
-
-if percentage == 100:
-    print("🏆 Excellent! You nailed every question.")
-elif percentage >= 70:
-    print("👍 Good job! You're on the right track.")
-elif percentage >= 40:
-    print("🙂 Not bad, but there's room to improve.")
-else:
-    print("👀 Keep practicing! You'll do better next time.")
 
 
 
