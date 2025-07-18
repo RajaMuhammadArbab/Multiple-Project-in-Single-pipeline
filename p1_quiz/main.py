@@ -27,14 +27,13 @@ for i, q in enumerate(questions):
 
 print(f"\nFinal Score: {total_score}")
 
-if score == total_possible:
-    print(" Excellent! You answered everything correctly.")
-elif score >= total_possible - 2:
-    print(" Great job! Just missed a few points.")
-elif score >= 4:
-    print(" Not bad, keep practicing!")
+
+if score == total_possible_score:
+    print("Feedback: Excellent work! You answered all questions correctly.")
+elif score > 0:
+    print("Feedback: Good effort! Try again to improve your score.")
 else:
-    print(" Better luck next time. Try again!")
+    print("Feedback: Keep practicing. Don't give up!")
 
 
 
