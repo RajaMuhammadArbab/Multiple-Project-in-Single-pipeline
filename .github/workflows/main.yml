@@ -8,7 +8,7 @@ on:
 
 jobs:
   run_quiz_project:
-    name: 🧠 Run Quiz Project
+    name: Run Quiz Project
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -21,7 +21,7 @@ jobs:
       - run: python main.py
 
   run_swap_project:
-    name: 🔄 Run Swap Project
+    name:  Run Swap Project
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -34,7 +34,7 @@ jobs:
       - run: python main.py
 
   run_df_project:
-    name: 📊 Run DataFrame Project
+    name:  Run DataFrame Project
     runs-on: ubuntu-latest
     defaults:
       run:
