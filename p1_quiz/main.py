@@ -27,12 +27,7 @@ for i, q in enumerate(questions):
 print(f"\nFinal Score: {score}")
 
 
-if total_score > 10:
-    print("Excellent!")
-elif total_score > 5:
-    print("Good job!")
-else:
-    print("Keep practicing!")
+
 
 
 
